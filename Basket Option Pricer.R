@@ -1,6 +1,5 @@
-#The copyright of this dissertation rests with the author and no quotation from it or 
+#The copyright of this dissertation code rests with the author and no quotation from it or 
 #information derived from it may be published without prior written consent of the author.
-#Dissertation in FM4T8E
 #London School of Economics and Political Sciences
 ################################################################
 
