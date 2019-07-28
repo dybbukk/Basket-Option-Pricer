@@ -2,7 +2,6 @@
 #information derived from it may be published without prior written consent of the author.
 #Dissertation in FM4T8E
 #London School of Economics and Political Sciences
-#Candidate Number: 14346"
 ################################################################
 
 # Functions for Basket options for two assets using moment matching technique
@@ -11,7 +10,7 @@
 BasketOptionVol<-function(pc,ATM,T,NCCY1,NCCY2,F1,F2,S1,S2,K,sigma1,sigma2,rdom,rCCY1,rCCY2,corr){
   #pc: call=1 put=-1
   #ATM=1 for at the money option
-  #NCC1 notional for first pair NCC2 notional for second pair
+  #NCC1 notional for first asset NCC2 notional for second asset
   #K=strike
   #S1,S2 spot rates today
   #sigma is local volatility
@@ -28,7 +27,7 @@ BasketOptionVol<-function(pc,ATM,T,NCCY1,NCCY2,F1,F2,S1,S2,K,sigma1,sigma2,rdom,
 BasketOptionPricer<-function(pc,ATM,T,NCCY1,NCCY2,F1,F2,S1,S2,K,sigma1,sigma2,rdom,rCCY1,rCCY2,corr){
   #pc: call=1 put=-1
   #ATM=1 for at the money option
-  #NCC1 notional for first pair NCC2 notional for second pair
+  #NCC1 notional for first asset NCC2 notional for second asset
   #K=strike
   #S1,S2 spot rates today
   #sigma is local volatility
@@ -63,7 +62,7 @@ BasketOptionPricer<-function(pc,ATM,T,NCCY1,NCCY2,F1,F2,S1,S2,K,sigma1,sigma2,rd
 library(readxl)
 install.packages("xlsx")
 library("xlsx")
-filepath<-"~/Google Drive/FINANCE LSE/Dissertation/DATA/4.Case study data.xlsm"
+filepath<-"~/---/---/---/---/---.xlsm"
 FX <- read_xlsx(filepath, sheet = "Basket Pricer Data ",col_names=T)
 
 
@@ -89,6 +88,6 @@ for (i in 1:12){
 #Put everything into a data table and export to excel
 BasketOptions<-data.frame(FX[,1],BasketVol,BasketOptionPrice)
 BasketOptions
-write.xlsx(BasketOptions, "~/Google Drive/FINANCE LSE/Dissertation/DATA/4.Case study data.xlsm", 
+write.xlsx(BasketOptions, "~/---/---/---/---/---.xlsm", 
            sheetName="Basket Option Prices", append=T)
 
