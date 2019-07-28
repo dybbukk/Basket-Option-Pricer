@@ -3,7 +3,7 @@
 #London School of Economics and Political Sciences
 ################################################################
 
-# Functions for Basket options for two assets using moment matching technique
+# Functions for Basket options for two assets using lognormal moment matching technique
 
 ################################################################
 BasketOptionVol<-function(pc,ATM,T,NCCY1,NCCY2,F1,F2,S1,S2,K,sigma1,sigma2,rdom,rCCY1,rCCY2,corr){
